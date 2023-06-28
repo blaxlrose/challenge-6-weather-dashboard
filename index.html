@@ -11,32 +11,36 @@
 
 <body>
    
-    <header class="heading">Weather Dashboard</header>
+    <header>
+        <h1>Weather Dashboard</h1>
+      </header>
 
-    <main id='container' class="container">
-        <div class="row">
-         
-            <div class="col1">
-                <div id='search-area'>
-                    <h1 class='h1'>Search for a City:</h1>
-                    <form id='city-search'>
-                        <input name='city' type="text" placeholder="New York" id='city' autofocus='true'
-                            class='city-input' />
-                        <button type="submit" id='search-btn' class='btn'>Search</button>
-                    </form>
-                    
-                    <hr>
-                    </hr>
-                    
-                    <div id="search-history"></div>
-                </div>
-            </div>
-            
-            <div class="col2">
-                <div id='five-day' class='row spacebetween'></div>
-            </div>
+      <aside>
+        <h2>Search</h2>
+        <input type="text" id="searchInput" placeholder="Enter a city">
+        <button onclick="searchCity()">Search</button>
+        <h2>Popular Cities</h2>
+        <ul>
+          <li onclick="getWeather('Richmond')">Richmond</li>
+          <li onclick="getWeather('Los Angeles')">Los Angeles</li>
+          <li onclick="getWeather('Atlanta')">Atlanta</li>
+          <li onclick="getWeather('Denver')">Denver</li>
+          <li onclick="getWeather('San Francisco')">San Francisco</li>
+          <li onclick="getWeather('New York')">New York</li>
+          <li onclick="getWeather('Chicago')">Chicago</li>
+          <li onclick="getWeather('Austin')">Austin</li>
+        </ul>
+      </aside>
+      
+      <main>
+        <div id="selectedCity">
+          <!-- Weather information for the chosen city will be displayed here -->
         </div>
-    </main>
+        <div id="forecast">
+          <!-- 5-day forecast will be displayed here -->
+        </div>
+      </main>
+    
 
     <script src='./assets/script.js'></script>
 
