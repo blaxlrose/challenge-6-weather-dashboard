@@ -9,8 +9,12 @@ header {
   padding-top: 20px;
 }
 
+.card {
+  border: 1px solid rgb(203, 97, 161);
+  border-width: 5px;
+  }
 .cityBorder {
-border: 1px solid rgb(7, 66, 230);
+border: 1px solid rgb(95, 127, 217);
 border-width: 5px;
 }
 .btnMargin {
